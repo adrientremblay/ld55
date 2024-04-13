@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dft06i0o7a16r"]
+[gd_scene load_steps=3 format=3 uid="uid://dft06i0o7a16r"]
 
 [ext_resource type="PackedScene" uid="uid://ci3or73yh7txj" path="res://scenes/platform.tscn" id="1_f5icy"]
+[ext_resource type="PackedScene" uid="uid://cpgdv8fm2wncs" path="res://scenes/object.tscn" id="2_5ocog"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Platform" parent="." instance=ExtResource("1_f5icy")]
+
+[node name="object" parent="." instance=ExtResource("2_5ocog")]
+position = Vector2(253, 176)
