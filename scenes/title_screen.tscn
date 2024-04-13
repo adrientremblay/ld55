@@ -44,6 +44,7 @@ label_settings = SubResource("LabelSettings_ajpjy")
 horizontal_alignment = 1
 
 [node name="Slide1" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,6 +59,7 @@ label_settings = SubResource("LabelSettings_dmwv7")
 horizontal_alignment = 1
 
 [node name="Slide2" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,6 +74,26 @@ theme_override_constants/margin_bottom = 100
 [node name="Label" type="Label" parent="Slide2"]
 layout_mode = 2
 text = "The year is 1329. Science has answered many questions but not the questions of the soul. The church claims to have answers to these questions but offer no proof. Alas god rarely speaks to mortal men with words and angels do not answer to petty summons. Those thirsty for the forbidden knowledge of the cosmos are forced to turn to summoning demons..."
+label_settings = SubResource("LabelSettings_0k0s3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Slide3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Label" type="Label" parent="Slide3"]
+layout_mode = 2
+text = "You are Cedric Leopold. The founder of the society of the dark altar. The solar eclipse is in the sky. You must summon all twelve demons of the apocalyse to get the answer you need."
 label_settings = SubResource("LabelSettings_0k0s3")
 horizontal_alignment = 1
 vertical_alignment = 1
