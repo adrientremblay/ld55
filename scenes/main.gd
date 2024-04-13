@@ -17,7 +17,8 @@ func _on_object_spawner_spawn_object(object: Variant) -> void:
 	add_child(object)
 
 func make_levels():
-	demons_to_summon.append(Demon.new("Abaddon", "sheep demon", [], []))
+	demons_to_summon.append(Demon.new("Abaddon", "sheep demon", [1,2,3,4,5], [1,2,3,4,5]))
 
 func load_demon(demon: Demon):
 	demonNameLabel.text = demon.name
+	$Altar.set_answers(demon.rows, demon.cols)

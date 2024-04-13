@@ -61,3 +61,8 @@ func update_row_labels():
 		
 		var label = row_labels[row]
 		label.text = str(row_count)
+
+func set_answers(answer_rows: Array, answer_cols: Array):
+	for i in range(5):
+		get_node("AnswerCols").get_node("y" + str(i+1)).text = str(answer_cols[i])
+		get_node("AnswerRows").get_node("x" + str(i+1)).text = str(answer_rows[i])
