@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dft06i0o7a16r"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
-[ext_resource type="PackedScene" uid="uid://cpgdv8fm2wncs" path="res://scenes/object.tscn" id="2_5ocog"]
+[ext_resource type="PackedScene" uid="uid://cpgdv8fm2wncs" path="res://scenes/offering.tscn" id="2_5ocog"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
-[ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/object_spawner.tscn" id="3_r0mkk"]
+[ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/offering_spawner.tscn" id="3_r0mkk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p50c6")

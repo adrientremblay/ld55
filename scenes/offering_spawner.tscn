@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbnxiup0a0586"]
 
-[ext_resource type="Script" path="res://scenes/object_spawner.gd" id="1_8hn2i"]
+[ext_resource type="Script" path="res://scripts/offering_spawner.gd" id="1_8hn2i"]
 [ext_resource type="Texture2D" uid="uid://b4usyu7c13fnc" path="res://assets/images/candle_crate.png" id="1_dt0ff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crckn"]

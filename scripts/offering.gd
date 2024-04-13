@@ -1,4 +1,4 @@
-extends Node2D
+class_name Offering extends Node2D
 
 var draggable = false
 var body_ref

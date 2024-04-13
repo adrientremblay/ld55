@@ -2,7 +2,7 @@ extends Node2D
 
 signal spawn_object(object)
 
-var object_scene = preload("res://scenes/object.tscn")
+var object_scene = preload("res://scenes/offering.tscn")
 var can_spawn = false
 
 # Called when the node enters the scene tree for the first time.
