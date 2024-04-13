@@ -2,6 +2,7 @@ class_name Offering extends Node2D
 
 var draggable = false
 var platforms_entered = []
+var old_platform = null
 var offset: Vector2
 var initial_pos
 
@@ -19,6 +20,7 @@ func _process(delta: float) -> void:
 		Dragging.is_dragging = true
 		if platforms_entered.size() == 1:
 			platforms_entered[0].placed_offering = null
+			old_platform = platforms_entered[0]
 	if Input.is_action_pressed("click"):
 		global_position = get_global_mouse_position() - offset
 	elif Input.is_action_just_released("click"):
@@ -29,6 +31,8 @@ func _process(delta: float) -> void:
 			platforms_entered[0].placed_offering = self
 		else:
 			tween.tween_property(self, "global_position", initial_pos, 0.2).set_ease(Tween.EASE_OUT)
+			if old_platform != null:
+				old_platform.placed_offering = self
 
 func _on_area_2d_mouse_entered() -> void:
 	if Dragging.is_dragging:
