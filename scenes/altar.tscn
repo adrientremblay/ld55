@@ -38,49 +38,49 @@ position = Vector2(315, 135)
 position = Vector2(405, 135)
 
 [node name="Platform11" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(45.3333, 227.333)
+position = Vector2(45, 225)
 
 [node name="Platform12" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(135.333, 227.333)
+position = Vector2(135, 225)
 
 [node name="Platform13" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(225.333, 227.333)
+position = Vector2(225, 225)
 
 [node name="Platform14" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(315.333, 227.333)
+position = Vector2(315, 225)
 
 [node name="Platform15" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(405.333, 227.333)
+position = Vector2(405, 225)
 
 [node name="Platform16" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(45.3333, 317.333)
+position = Vector2(45, 315)
 
 [node name="Platform17" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(135.333, 317.333)
+position = Vector2(135, 315)
 
 [node name="Platform18" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(225.333, 317.333)
+position = Vector2(225, 315)
 
 [node name="Platform19" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(315.333, 317.333)
+position = Vector2(315, 315)
 
 [node name="Platform20" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(405.333, 317.333)
+position = Vector2(405, 315)
 
 [node name="Platform21" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(46.6667, 410)
+position = Vector2(45, 405)
 
 [node name="Platform22" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(136.667, 410)
+position = Vector2(135, 405)
 
 [node name="Platform23" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(226.667, 410)
+position = Vector2(225, 405)
 
 [node name="Platform24" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(316.667, 410)
+position = Vector2(315, 405)
 
 [node name="Platform25" parent="." instance=ExtResource("1_i1ljc")]
-position = Vector2(406.667, 410)
+position = Vector2(405, 405)
 
 [node name="y1" type="Label" parent="."]
 offset_left = 12.6667

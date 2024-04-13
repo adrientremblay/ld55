@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://h5uegdst2jew"]
+
+[ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_6jvyd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4aep2"]
+font = ExtResource("1_6jvyd")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxfn2"]
+font = ExtResource("1_6jvyd")
+font_size = 40
+
+[node name="Grimoire" type="VBoxContainer"]
+offset_right = 360.0
+offset_bottom = 723.0
+
+[node name="CurrentDemon" type="Label" parent="."]
+layout_mode = 2
+text = "current demon:"
+label_settings = SubResource("LabelSettings_4aep2")
+horizontal_alignment = 1
+
+[node name="DemonName" type="Label" parent="."]
+layout_mode = 2
+text = "Demon Name"
+label_settings = SubResource("LabelSettings_bxfn2")
+horizontal_alignment = 1
+vertical_alignment = 1
