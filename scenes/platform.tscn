@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci3or73yh7txj"]
+[gd_scene load_steps=3 format=3 uid="uid://ci3or73yh7txj"]
+
+[ext_resource type="Script" path="res://scenes/platform.gd" id="1_mg3fn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbi1v"]
 size = Vector2(128, 128)
 
 [node name="Platform" type="StaticBody2D" groups=["droppable"]]
+script = ExtResource("1_mg3fn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hbi1v")
