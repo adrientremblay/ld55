@@ -7,7 +7,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Dragging.is_dragging:
-		modulate = Color(Color.WHITE, 0.7)
-	else:
-		modulate = Color(Color.WHITE, 1.0)
+	pass
