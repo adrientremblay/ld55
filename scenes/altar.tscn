@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ci3or73yh7txj" path="res://scenes/platform.tscn" id="1_i1ljc"]
 
 [node name="Altar" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 
 [node name="Platform" parent="." instance=ExtResource("1_i1ljc")]
 position = Vector2(43, 44)
