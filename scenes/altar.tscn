@@ -5,7 +5,7 @@
 [node name="Altar" type="Node2D"]
 scale = Vector2(1.5, 1.5)
 
-[node name="Platform" parent="." instance=ExtResource("1_i1ljc")]
+[node name="Platform1" parent="." instance=ExtResource("1_i1ljc")]
 position = Vector2(45, 45)
 
 [node name="Platform2" parent="." instance=ExtResource("1_i1ljc")]
@@ -124,3 +124,33 @@ position = Vector2(315.333, 317.333)
 
 [node name="Platform40" parent="." instance=ExtResource("1_i1ljc")]
 position = Vector2(405.333, 317.333)
+
+[node name="Platform41" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(46.6667, 410)
+
+[node name="Platform42" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(136.667, 410)
+
+[node name="Platform43" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(226.667, 410)
+
+[node name="Platform44" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(316.667, 410)
+
+[node name="Platform45" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(406.667, 410)
+
+[node name="Platform46" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(46.6667, 410)
+
+[node name="Platform47" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(136.667, 410)
+
+[node name="Platform48" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(226.667, 410)
+
+[node name="Platform49" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(316.667, 410)
+
+[node name="Platform50" parent="." instance=ExtResource("1_i1ljc")]
+position = Vector2(406.667, 410)
