@@ -27,7 +27,7 @@ label_settings = SubResource("LabelSettings_bxfn2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Description" type="Label" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus eu risus eu convallis. Vivamus nec blandit ex. Nam iaculis aliquam turpis. Quisque vehicula sagittis orci, eu aliquet lacus pellentesque vitae. Praesent vel iaculis ex. Maecenas pretium urna sodales, placerat erat vel, rhoncus justo. Praesent auctor ornare turpis, vel rutrum enim rutrum eu. Quisque lacus justo, sodales et nulla at, hendrerit semper metus. Phasellus pretium sem sed mi ullamcorper elementum. Nunc in quam neque. Phasellus eu sapien lacinia nibh lacinia bibendum fermentum in leo. Phasellus id auctor odio. Duis sit amet neque faucibus, mattis arcu ut, consectetur nisi."
