@@ -123,6 +123,48 @@ text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AnswerCols" type="HBoxContainer" parent="."]
+modulate = Color(0.203922, 1, 0, 1)
+offset_top = 480.0
+offset_right = 448.0
+offset_bottom = 511.0
+alignment = 1
+
+[node name="y1" type="Label" parent="AnswerCols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y2" type="Label" parent="AnswerCols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y3" type="Label" parent="AnswerCols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y4" type="Label" parent="AnswerCols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y5" type="Label" parent="AnswerCols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="rows" type="VBoxContainer" parent="."]
 offset_left = 464.0
 offset_right = 509.0
@@ -153,6 +195,42 @@ text = "#"
 vertical_alignment = 1
 
 [node name="x5" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="AnswerRows" type="VBoxContainer" parent="."]
+modulate = Color(0, 1, 0, 1)
+offset_left = 495.0
+offset_right = 540.0
+offset_bottom = 446.0
+
+[node name="x1" type="Label" parent="AnswerRows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x2" type="Label" parent="AnswerRows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x3" type="Label" parent="AnswerRows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x4" type="Label" parent="AnswerRows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x5" type="Label" parent="AnswerRows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
