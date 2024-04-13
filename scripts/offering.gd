@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 		var tween = get_tree().create_tween()
 		if body_ref != null:
 			tween.tween_property(self, "global_position", body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
+			body_ref.placed_offering = body_ref
 
 func _on_area_2d_mouse_entered() -> void:
 	if Dragging.is_dragging:
