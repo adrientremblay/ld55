@@ -1,12 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dft06i0o7a16r"]
+[gd_scene load_steps=5 format=3 uid="uid://dft06i0o7a16r"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
 [ext_resource type="PackedScene" uid="uid://cpgdv8fm2wncs" path="res://scenes/object.tscn" id="2_5ocog"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
+[ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/object_spawner.tscn" id="3_r0mkk"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+script = ExtResource("1_p50c6")
 
 [node name="object" parent="." instance=ExtResource("2_5ocog")]
-position = Vector2(90, 501)
+position = Vector2(129, 304)
 
 [node name="Altar" parent="." instance=ExtResource("2_64s2l")]
 position = Vector2(252, 9)
+
+[node name="ObjectSpawner" parent="." instance=ExtResource("3_r0mkk")]
+position = Vector2(1080, 322)
+
+[connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
