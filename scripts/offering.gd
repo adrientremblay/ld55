@@ -1,7 +1,7 @@
 class_name Offering extends Node2D
 
 var draggable = false
-var body_ref
+var platforms_entered = []
 var offset: Vector2
 var initial_pos
 
@@ -17,16 +17,18 @@ func _process(delta: float) -> void:
 		offset = get_global_mouse_position() - global_position
 		initial_pos = global_position
 		Dragging.is_dragging = true
-		if body_ref != null:
-			body_ref.placed_offering = null
+		if platforms_entered.size() == 1:
+			platforms_entered[0].placed_offering = null
 	if Input.is_action_pressed("click"):
 		global_position = get_global_mouse_position() - offset
 	elif Input.is_action_just_released("click"):
 		Dragging.is_dragging = false
 		var tween = get_tree().create_tween()
-		if body_ref != null:
-			tween.tween_property(self, "global_position", body_ref.global_position, 0.2).set_ease(Tween.EASE_OUT)
-			body_ref.placed_offering = body_ref
+		if platforms_entered.size() == 1 and platforms_entered[0].placed_offering == null:
+			tween.tween_property(self, "global_position", platforms_entered[0].global_position, 0.2).set_ease(Tween.EASE_OUT)
+			platforms_entered[0].placed_offering = self
+		else:
+			tween.tween_property(self, "global_position", initial_pos, 0.2).set_ease(Tween.EASE_OUT)
 
 func _on_area_2d_mouse_entered() -> void:
 	if Dragging.is_dragging:
@@ -47,7 +49,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		return
 		
 	body.modulate = Color(Color.WHITE, 0.7)
-	body_ref = body
+	platforms_entered.append(body)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	platforms_entered.erase(body)
 	body.modulate = Color(Color.WHITE, 1.0)

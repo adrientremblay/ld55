@@ -16,7 +16,6 @@ func _process(delta: float) -> void:
 		var object_instance = object_scene.instantiate()
 		object_instance.global_position = get_global_mouse_position()
 		spawn_object.emit(object_instance)
-		print("spawned")
 
 func _on_area_2d_mouse_entered() -> void:
 	can_spawn = true
