@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy6bcdfq4xpc6"]
+[gd_scene load_steps=6 format=3 uid="uid://dy6bcdfq4xpc6"]
 
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_04yea"]
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_kel8b"]
+[ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_jujt7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajpjy"]
+font = ExtResource("1_04yea")
+font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_dmwv7"]
-font = ExtResource("1_04yea")
-font_size = 56
+font = ExtResource("2_jujt7")
+font_size = 150
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -16,12 +21,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kel8b")
 
-[node name="Label" type="Label" parent="."]
+[node name="continue" type="Label" parent="."]
+layout_mode = 2
+offset_top = 665.0
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_vertical = 8
+text = "[click to continue]"
+label_settings = SubResource("LabelSettings_ajpjy")
+horizontal_alignment = 1
+
+[node name="Slide1" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 76.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-text = "DEMON FUCKER"
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Slide1"]
+layout_mode = 2
+text = "A DARK ALTAR"
 label_settings = SubResource("LabelSettings_dmwv7")
 horizontal_alignment = 1
+
+[node name="Slide2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
