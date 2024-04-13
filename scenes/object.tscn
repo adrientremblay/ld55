@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpgdv8fm2wncs"]
+
+[ext_resource type="Texture2D" uid="uid://dkixbxuj008a0" path="res://assets/images/candle.png" id="1_vy4n1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7qd4"]
+
+[node name="object" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_vy4n1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.6, 1.6)
+shape = SubResource("RectangleShape2D_q7qd4")
