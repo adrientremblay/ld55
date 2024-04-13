@@ -2,15 +2,18 @@ extends Node2D
 
 var platform_matrix = []
 var col_labels = []
+var row_labels = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	populate_platform_matrix()
 	populate_col_labels()
+	populate_row_labels()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	update_col_labels() # TODO: optimization (only run this when offerrings are placed
+	update_row_labels()
 
 func populate_platform_matrix():
 	for i in range(5):
@@ -28,6 +31,12 @@ func populate_col_labels():
 		var col_number = i+1
 		var col_label = get_node("y" + str(col_number))
 		col_labels.append(col_label)
+		
+func populate_row_labels():
+	for i in range(5):
+		var row_number = i+1
+		var row_label = get_node("x" + str(row_number))
+		row_labels.append(row_label)
 
 func update_col_labels():
 	for col in range(5):
@@ -40,3 +49,15 @@ func update_col_labels():
 		
 		var label = col_labels[col]
 		label.text = str(col_count)
+
+func update_row_labels():
+	for row in range(5):
+		var row_count = 0;
+		
+		for platform_i in range(5):
+			var platform = platform_matrix[row][platform_i]
+			if (platform.placed_offering != null):
+				row_count+=1;
+		
+		var label = row_labels[row]
+		label.text = str(row_count)

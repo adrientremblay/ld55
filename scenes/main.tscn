@@ -1,16 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dft06i0o7a16r"]
+[gd_scene load_steps=5 format=3 uid="uid://dft06i0o7a16r"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
 [ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/offering_spawner.tscn" id="3_r0mkk"]
+[ext_resource type="Texture2D" uid="uid://b2pi2pwbsw77p" path="res://assets/images/table.png" id="4_6om3k"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p50c6")
 
 [node name="Altar" parent="." instance=ExtResource("2_64s2l")]
-position = Vector2(252, 9)
+modulate = Color(1, 1, 1, 0.611765)
+position = Vector2(300, 9)
 
 [node name="ObjectSpawner" parent="." instance=ExtResource("3_r0mkk")]
-position = Vector2(1080, 322)
+position = Vector2(1121, 586)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_6om3k")
 
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
