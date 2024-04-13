@@ -29,13 +29,13 @@ func populate_platform_matrix():
 func populate_col_labels():
 	for i in range(5):
 		var col_number = i+1
-		var col_label = get_node("y" + str(col_number))
+		var col_label = get_node("cols").get_node("y" + str(col_number))
 		col_labels.append(col_label)
 		
 func populate_row_labels():
 	for i in range(5):
 		var row_number = i+1
-		var row_label = get_node("x" + str(row_number))
+		var row_label = get_node("rows").get_node("x" + str(row_number))
 		row_labels.append(row_label)
 
 func update_col_labels():
