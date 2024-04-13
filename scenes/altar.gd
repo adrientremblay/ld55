@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	update_col_labels()
+	update_col_labels() # TODO: optimization (only run this when offerrings are placed
 
 func populate_platform_matrix():
 	for i in range(5):

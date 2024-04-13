@@ -17,6 +17,8 @@ func _process(delta: float) -> void:
 		offset = get_global_mouse_position() - global_position
 		initial_pos = global_position
 		Dragging.is_dragging = true
+		if body_ref != null:
+			body_ref.placed_offering = null
 	if Input.is_action_pressed("click"):
 		global_position = get_global_mouse_position() - offset
 	elif Input.is_action_just_released("click"):
