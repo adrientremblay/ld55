@@ -82,46 +82,6 @@ position = Vector2(315, 405)
 [node name="Platform25" parent="." instance=ExtResource("1_i1ljc")]
 position = Vector2(405, 405)
 
-[node name="x1" type="Label" parent="."]
-offset_left = 453.333
-offset_top = 34.0
-offset_right = 515.333
-offset_bottom = 57.0
-text = "number"
-vertical_alignment = 1
-
-[node name="x2" type="Label" parent="."]
-offset_left = 454.667
-offset_top = 116.667
-offset_right = 516.667
-offset_bottom = 139.667
-text = "number"
-vertical_alignment = 1
-
-[node name="x3" type="Label" parent="."]
-offset_left = 455.333
-offset_top = 217.333
-offset_right = 517.333
-offset_bottom = 240.333
-text = "number"
-vertical_alignment = 1
-
-[node name="x4" type="Label" parent="."]
-offset_left = 452.667
-offset_top = 302.0
-offset_right = 514.667
-offset_bottom = 325.0
-text = "number"
-vertical_alignment = 1
-
-[node name="x5" type="Label" parent="."]
-offset_left = 458.0
-offset_top = 402.0
-offset_right = 520.0
-offset_bottom = 425.0
-text = "number"
-vertical_alignment = 1
-
 [node name="cols" type="HBoxContainer" parent="."]
 offset_top = 449.0
 offset_right = 448.0
@@ -131,34 +91,69 @@ alignment = 1
 [node name="y1" type="Label" parent="cols"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "number"
+text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="y2" type="Label" parent="cols"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "number"
+text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="y3" type="Label" parent="cols"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "number"
+text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="y4" type="Label" parent="cols"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "number"
+text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="y5" type="Label" parent="cols"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "number"
+text = "#"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="rows" type="VBoxContainer" parent="."]
+offset_left = 464.0
+offset_right = 509.0
+offset_bottom = 446.0
+
+[node name="x1" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x2" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x3" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x4" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
+vertical_alignment = 1
+
+[node name="x5" type="Label" parent="rows"]
+layout_mode = 2
+size_flags_vertical = 7
+text = "#"
 vertical_alignment = 1
