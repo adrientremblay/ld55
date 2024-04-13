@@ -30,6 +30,8 @@ func _process(delta: float) -> void:
 			tween.tween_property(self, "global_position", initial_pos, 0.2).set_ease(Tween.EASE_OUT)
 			if old_platform != null:
 				old_platform.placed_offering = self
+		elif old_platform == null:
+			queue_free()
 
 func _on_area_2d_mouse_entered() -> void:
 	can_be_dragged = true
