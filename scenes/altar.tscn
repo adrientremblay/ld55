@@ -82,51 +82,6 @@ position = Vector2(315, 405)
 [node name="Platform25" parent="." instance=ExtResource("1_i1ljc")]
 position = Vector2(405, 405)
 
-[node name="y1" type="Label" parent="."]
-offset_left = 12.6667
-offset_top = 455.333
-offset_right = 74.6667
-offset_bottom = 478.333
-text = "number"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="y2" type="Label" parent="."]
-offset_left = 103.333
-offset_top = 456.0
-offset_right = 165.333
-offset_bottom = 479.0
-text = "number"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="y3" type="Label" parent="."]
-offset_left = 194.667
-offset_top = 454.0
-offset_right = 256.667
-offset_bottom = 477.0
-text = "number"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="y4" type="Label" parent="."]
-offset_left = 290.667
-offset_top = 455.333
-offset_right = 352.667
-offset_bottom = 478.333
-text = "number"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="y5" type="Label" parent="."]
-offset_left = 375.333
-offset_top = 454.667
-offset_right = 437.333
-offset_bottom = 477.667
-text = "number"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="x1" type="Label" parent="."]
 offset_left = 453.333
 offset_top = 34.0
@@ -165,4 +120,45 @@ offset_top = 402.0
 offset_right = 520.0
 offset_bottom = 425.0
 text = "number"
+vertical_alignment = 1
+
+[node name="cols" type="HBoxContainer" parent="."]
+offset_top = 449.0
+offset_right = 448.0
+offset_bottom = 480.0
+alignment = 1
+
+[node name="y1" type="Label" parent="cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y2" type="Label" parent="cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y3" type="Label" parent="cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y4" type="Label" parent="cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "number"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="y5" type="Label" parent="cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "number"
+horizontal_alignment = 1
 vertical_alignment = 1
