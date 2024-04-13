@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("click") and can_spawn):
 		var object_instance = object_scene.instantiate()
 		object_instance.global_position = get_global_mouse_position()
+		object_instance.being_dragged = true
 		spawn_object.emit(object_instance)
 
 func _on_area_2d_mouse_entered() -> void:
