@@ -4,8 +4,8 @@ var slide = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	$Slide1.visible = true
+	$Slide2.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,3 +16,4 @@ func _process(delta: float) -> void:
 				$Slide2.visible = true
 			2:
 				get_tree().change_scene_to_file("res://scenes/main.tscn")
+		slide+=1

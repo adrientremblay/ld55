@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy6bcdfq4xpc6"]
+[gd_scene load_steps=8 format=3 uid="uid://dy6bcdfq4xpc6"]
 
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_04yea"]
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_kel8b"]
 [ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_jujt7"]
+[ext_resource type="Texture2D" uid="uid://blt0nix8rj3vl" path="res://assets/images/title_screen.png" id="4_avhp4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ajpjy"]
 font = ExtResource("1_04yea")
@@ -12,6 +13,10 @@ font_size = 40
 font = ExtResource("2_jujt7")
 font_size = 150
 
+[sub_resource type="LabelSettings" id="LabelSettings_0k0s3"]
+font = ExtResource("2_jujt7")
+font_size = 50
+
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +25,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kel8b")
+
+[node name="background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_avhp4")
 
 [node name="continue" type="Label" parent="."]
 layout_mode = 2
@@ -46,6 +58,21 @@ label_settings = SubResource("LabelSettings_dmwv7")
 horizontal_alignment = 1
 
 [node name="Slide2" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Label" type="Label" parent="Slide2"]
+layout_mode = 2
+text = "The year is 1329. Science has answered many questions but not the questions of the soul. The church claims to have answers to these questions but offer no proof. Alas god rarely speaks to mortal men with words and angels do not answer to petty summons. Those thirsty for the forbidden knowledge of the cosmos are forced to turn to summoning demons..."
+label_settings = SubResource("LabelSettings_0k0s3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
