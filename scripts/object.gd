@@ -13,12 +13,18 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_area_2d_mouse_entered() -> void:
-	if not Dragging.is_dragging:
-		draggable = true
-		scale = Vector2(1.05, 1.05)
+	if Dragging.is_dragging:
+		return
+		
+	draggable = true
+	scale = Vector2(1.1, 1.1)
 
 func _on_area_2d_mouse_exited() -> void:
-	pass # Replace with function body.
+	if Dragging.is_dragging:
+		return
+		
+	draggable = false
+	scale = Vector2(1.0, 1.0)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
