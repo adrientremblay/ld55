@@ -10,7 +10,8 @@ script = ExtResource("1_p50c6")
 
 [node name="Altar" parent="." instance=ExtResource("2_64s2l")]
 modulate = Color(1, 1, 1, 0.611765)
-position = Vector2(300, 9)
+position = Vector2(364, 64)
+scale = Vector2(1.25, 1.25)
 
 [node name="ObjectSpawner" parent="." instance=ExtResource("3_r0mkk")]
 position = Vector2(1121, 586)
