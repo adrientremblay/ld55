@@ -29,8 +29,10 @@ func summon(demon: Demon):
 	line_i = 0
 	$SpeechBubble.text = demon.lines[line_i]
 	$DemonFace.animation = demon.name
+	$SummonSound.play()
 
 func banish():
 	Global.game_paused = false
 	visible = false
 	next_level.emit()
+	$BanishSound.play()

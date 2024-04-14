@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbo2kwetjuaqc"]
+[gd_scene load_steps=17 format=3 uid="uid://bbo2kwetjuaqc"]
 
 [ext_resource type="Texture2D" uid="uid://crmisd5rntwpl" path="res://assets/images/demon1-Sheet.png" id="1_vk3n7"]
 [ext_resource type="Script" path="res://scripts/demon_scene.gd" id="1_xw2gr"]
 [ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="2_kprho"]
 [ext_resource type="Texture2D" uid="uid://d2tih7s0d587d" path="res://assets/images/demon2-Sheet.png" id="3_r16y5"]
 [ext_resource type="Texture2D" uid="uid://ckg43wbq6sssh" path="res://assets/images/demon3-Sheet.png" id="3_sg0p1"]
+[ext_resource type="AudioStream" uid="uid://c1r8cta5qfva5" path="res://assets/audio/sounds/summon_sound.wav" id="6_judrp"]
+[ext_resource type="AudioStream" uid="uid://dgkiikwthrndq" path="res://assets/audio/sounds/banish_sound.wav" id="7_77vyk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7idv"]
 atlas = ExtResource("1_vk3n7")
@@ -121,3 +123,9 @@ text = "HELLO I AM A DEMON!!!HELLO I AM A DEMON!!!HELLO I AM A DEMON!!!HELLO I A
 label_settings = SubResource("LabelSettings_tnlri")
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="SummonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_judrp")
+
+[node name="BanishSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_77vyk")
