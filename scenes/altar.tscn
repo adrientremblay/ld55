@@ -124,7 +124,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnswerCols" type="HBoxContainer" parent="."]
-modulate = Color(0.203922, 1, 0, 1)
 offset_top = 480.0
 offset_right = 448.0
 offset_bottom = 511.0
@@ -201,7 +200,6 @@ text = "#"
 vertical_alignment = 1
 
 [node name="AnswerRows" type="VBoxContainer" parent="."]
-modulate = Color(0, 1, 0, 1)
 offset_left = 495.0
 offset_right = 540.0
 offset_bottom = 446.0

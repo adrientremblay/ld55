@@ -28,7 +28,7 @@ offset_bottom = 191.0
 
 [node name="Info" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_top = -192.0
+offset_top = -166.0
 offset_right = 360.0
 offset_bottom = 188.0
 

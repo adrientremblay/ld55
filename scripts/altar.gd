@@ -69,20 +69,34 @@ func set_answers(answer_rows: Array, answer_cols: Array):
 	for i in range(5):
 		get_node("AnswerCols").get_node("y" + str(i+1)).text = str(answer_cols[i])
 		get_node("AnswerRows").get_node("x" + str(i+1)).text = str(answer_rows[i])
+	check_puzzle_completion()
 
 func check_puzzle_completion():
+	var puzzle_complete = true
+	
 	update_col_labels()
 	update_row_labels()
 	for i in range(5):
-		var answer_col = get_node("AnswerCols").get_node("y" + str(i+1)).text
-		var col = get_node("cols").get_node("y" + str(i+1)).text
-		var answer_row = get_node("AnswerRows").get_node("x" + str(i+1)).text
-		var row = get_node("rows").get_node("x" + str(i+1)).text
+		var answer_col = get_node("AnswerCols").get_node("y" + str(i+1))
+		var col = get_node("cols").get_node("y" + str(i+1))
+		var answer_row = get_node("AnswerRows").get_node("x" + str(i+1))
+		var row = get_node("rows").get_node("x" + str(i+1))
 		
-		if answer_col != col or answer_row != row:
-			return false
+		if answer_col.text != col.text or answer_row.text != row.text:
+			puzzle_complete = false
+			
+		# updating label colors
+		if answer_col.text != col.text:
+			col.modulate = Color.RED
+		else:
+			col.modulate = Color.GREEN
+			
+		if answer_row.text != row.text:
+			row.modulate = Color.RED
+		else:
+			row.modulate = Color.GREEN
 		
-	return true
+	return puzzle_complete
 
 func clear_altar():
 	for i in range(5):
