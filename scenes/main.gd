@@ -9,6 +9,7 @@ var current_demon = 0
 func _ready() -> void:
 	make_levels()
 	load_demon(demons_to_summon[current_demon])
+	$DemonWindow.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,5 +34,11 @@ func load_demon(demon: Demon):
 	
 	$Altar.set_answers(demon.rows, demon.cols)
 
-func _on_object_check_if_puzzle_complete() -> void:
-	print('checking')
+func _on_object_spawner_altar_check() -> void:
+	if $Altar.check_puzzle_completion():
+		level_complete(demons_to_summon[current_demon])
+		current_demon += 1
+
+func level_complete(demon: Demon):
+	$DemonWindow.visible = true
+	print("level complete")

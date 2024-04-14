@@ -68,9 +68,16 @@ func set_answers(answer_rows: Array, answer_cols: Array):
 		get_node("AnswerRows").get_node("x" + str(i+1)).text = str(answer_rows[i])
 
 func check_puzzle_completion():
+	update_col_labels() # TODO: optimization (only run this when offerrings are placed
+	update_row_labels()
+	print("checking puzzle completionnn")
 	for i in range(5):
-		if get_node("AnswerCols").get_node("y" + str(i+1)).text != get_node("cols").get_node("y" + str(i+1)).text:
+		var answer_col = get_node("AnswerCols").get_node("y" + str(i+1)).text
+		var col = get_node("cols").get_node("y" + str(i+1)).text
+		var answer_row = get_node("AnswerRows").get_node("x" + str(i+1)).text
+		var row = get_node("rows").get_node("x" + str(i+1)).text
+		
+		if answer_col != col or answer_row != row:
 			return false
-		if get_node("AnswerRows").get_node("x" + str(i+1)).text != get_node("rows").get_node("x" + str(i+1)).text:
-			return false
+		
 	return true

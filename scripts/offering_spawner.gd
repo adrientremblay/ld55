@@ -5,6 +5,8 @@ signal spawn_object(object)
 var object_scene = preload("res://scenes/offering.tscn")
 var can_spawn = false
 
+signal altar_check
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -23,7 +25,7 @@ func _on_area_2d_mouse_entered() -> void:
 	can_spawn = true
 
 func ask_altar_to_check_game_completion():
-	print("ask altar")
+	altar_check.emit()
 
 func _on_area_2d_mouse_exited() -> void:
 	can_spawn = false

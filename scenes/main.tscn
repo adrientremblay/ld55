@@ -43,4 +43,5 @@ layout_mode = 2
 text = "YOU HAVE SUMMONED ME MORTAL!!!"
 horizontal_alignment = 1
 
+[connection signal="altar_check" from="ObjectSpawner" to="." method="_on_object_spawner_altar_check"]
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
