@@ -60,7 +60,7 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("trash"):
 		in_trash = true
-		print("in trash")
+		body.scale = Vector2(1.1,1.1)
 		return
 	
 	if not body.is_in_group("droppable"):
@@ -72,6 +72,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("trash"):
 		in_trash = false
+		body.scale = Vector2(1.0,1.0)
 		return
 	
 	if not body.is_in_group("droppable"):
