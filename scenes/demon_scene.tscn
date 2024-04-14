@@ -126,6 +126,8 @@ autowrap_mode = 2
 
 [node name="SummonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_judrp")
+volume_db = -5.0
 
 [node name="BanishSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_77vyk")
+volume_db = -5.0

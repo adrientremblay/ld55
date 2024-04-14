@@ -45,8 +45,8 @@ func generate_puzzle(level):
 			candle_density = 0.4
 			skull_density = 0.0
 		3: 
-			candle_density = 0.6
-			skull_density = 0.3
+			candle_density = 0.2
+			skull_density = 0.1
 	
 	var total_candles = 0
 	var total_skulls = 0
