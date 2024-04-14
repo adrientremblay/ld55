@@ -26,9 +26,11 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	can_spawn = true
+	scale = Vector2(5.1,5.1)
 
 func ask_altar_to_check_game_completion():
 	altar_check.emit()
 
 func _on_area_2d_mouse_exited() -> void:
 	can_spawn = false
+	scale = Vector2(5.0,5.0)
