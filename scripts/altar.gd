@@ -15,8 +15,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	#update_col_labels() # TODO: optimization (only run this when offerrings are placed
-	#update_row_labels()
 
 func populate_platform_matrix():
 	for i in range(5):
@@ -57,7 +55,9 @@ func update_col_labels():
 				Offering.OfferingType.SKULL:
 					platform_value = 2
 				Offering.OfferingType.BLOOD:
-					platform_value = 0 # TODO
+					platform_value = 0
+			
+			platform_value += calculated_blood_value(platform_i, col)
 			
 			col_count += platform_value
 		
@@ -80,7 +80,9 @@ func update_row_labels():
 				Offering.OfferingType.SKULL:
 					platform_value = 2
 				Offering.OfferingType.BLOOD:
-					platform_value = 0 # TODO
+					platform_value = 0
+			
+			platform_value += calculated_blood_value(row, platform_i)
 			
 			row_count += platform_value
 		
@@ -130,3 +132,17 @@ func clear_altar():
 				var offering = platform.placed_offering
 				platform.placed_offering = null
 				offering.queue_free()
+
+func calculated_blood_value(i: int, j: int):
+	var added_value = 0
+	
+	if i > 0 and platform_matrix[i-1][j].placed_offering != null and platform_matrix[i-1][j].placed_offering.type == Offering.OfferingType.BLOOD:
+		added_value += 1
+	if i < 4 and platform_matrix[i+1][j].placed_offering != null and platform_matrix[i+1][j].placed_offering.type == Offering.OfferingType.BLOOD:
+		added_value += 1
+	if j > 0 and platform_matrix[i][j-1].placed_offering != null and platform_matrix[i][j-1].placed_offering.type == Offering.OfferingType.BLOOD:
+		added_value += 1
+	if j < 4 and platform_matrix[i][j+1].placed_offering != null and platform_matrix[i][j+1].placed_offering.type == Offering.OfferingType.BLOOD:
+		added_value += 1
+	
+	return added_value
