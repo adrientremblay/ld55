@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dft06i0o7a16r"]
+[gd_scene load_steps=8 format=3 uid="uid://dft06i0o7a16r"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b2pi2pwbsw77p" path="res://assets/images/table.png" id="4_6om3k"]
 [ext_resource type="PackedScene" uid="uid://h5uegdst2jew" path="res://scenes/grimoire.tscn" id="5_qrky2"]
 [ext_resource type="PackedScene" uid="uid://bbo2kwetjuaqc" path="res://scenes/demon_scene.tscn" id="6_jih8r"]
+[ext_resource type="PackedScene" uid="uid://dqrq8qsn3sx0g" path="res://scenes/trash.tscn" id="7_ipkkk"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p50c6")
@@ -29,6 +30,9 @@ texture = ExtResource("4_6om3k")
 [node name="DemonScene" parent="." instance=ExtResource("6_jih8r")]
 visible = false
 z_index = 4
+
+[node name="Trash" parent="." instance=ExtResource("7_ipkkk")]
+position = Vector2(1154, 177)
 
 [connection signal="altar_check" from="ObjectSpawner" to="." method="_on_object_spawner_altar_check"]
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]

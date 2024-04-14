@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqrq8qsn3sx0g"]
+
+[ext_resource type="Texture2D" uid="uid://cv170jh3k20ma" path="res://assets/images/trash.png" id="1_56ui6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hhjrm"]
+font_size = 24
+
+[node name="Trash" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_56ui6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -31.0
+offset_top = 67.0
+offset_right = 29.0
+offset_bottom = 101.0
+text = "trash"
+label_settings = SubResource("LabelSettings_hhjrm")
