@@ -20,7 +20,7 @@ func _init(level, name, description, cols, rows, lines, instructions):
 		self.cols = cols
 		self.rows = rows
 	else:
-		var puzzle = generate_puzzle()
+		var puzzle = generate_puzzle(level)
 		self.rows = puzzle[0]
 		self.cols = puzzle[1]
 	
@@ -29,13 +29,22 @@ func _init(level, name, description, cols, rows, lines, instructions):
 	else:
 		self.lines = ["Hello I am a demon"]
 
-func generate_puzzle():
+func generate_puzzle(level):
 	var rows = [0,0,0,0,0]
 	var cols = [0,0,0,0,0]
 	
+	var candle_density = 0.5
+	match level:
+		1:
+			candle_density = 0.2
+		2: 
+			candle_density = 0.4
+		3: 
+			candle_density = 0.6
+	
 	for i in range(5):
 		for j in range(5):
-			var should_place = rng.randf() > 0.5
+			var should_place = rng.randf() < candle_density
 			if should_place:
 				rows[i]+=1
 				cols[j]+=1
