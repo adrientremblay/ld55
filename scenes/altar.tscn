@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy3mptasstq5l"]
+[gd_scene load_steps=4 format=3 uid="uid://cy3mptasstq5l"]
 
 [ext_resource type="PackedScene" uid="uid://ci3or73yh7txj" path="res://scenes/platform.tscn" id="1_i1ljc"]
 [ext_resource type="Script" path="res://scripts/altar.gd" id="1_ioxvw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aelev"]
+font_size = 22
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Altar" type="Node2D"]
 scale = Vector2(1.5, 1.5)
@@ -92,6 +97,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -99,6 +105,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -106,6 +113,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -113,6 +121,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -120,6 +129,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -133,6 +143,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -140,6 +151,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -147,6 +159,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -154,6 +167,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -161,6 +175,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -173,30 +188,35 @@ offset_bottom = 446.0
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x2" type="Label" parent="rows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x3" type="Label" parent="rows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x4" type="Label" parent="rows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x5" type="Label" parent="rows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="AnswerRows" type="VBoxContainer" parent="."]
@@ -208,28 +228,33 @@ offset_bottom = 446.0
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x2" type="Label" parent="AnswerRows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x3" type="Label" parent="AnswerRows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x4" type="Label" parent="AnswerRows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
 
 [node name="x5" type="Label" parent="AnswerRows"]
 layout_mode = 2
 size_flags_vertical = 7
 text = "#"
+label_settings = SubResource("LabelSettings_aelev")
 vertical_alignment = 1
