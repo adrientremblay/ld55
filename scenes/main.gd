@@ -41,6 +41,8 @@ func _on_object_spawner_altar_check() -> void:
 		level_complete()
 
 func level_complete():
+	$Altar.clear_altar()
+	
 	var demon = demons_to_summon[current_demon]
 	$DemonScene.summon(demon)
 

@@ -83,3 +83,14 @@ func check_puzzle_completion():
 			return false
 		
 	return true
+
+func clear_altar():
+	for i in range(5):
+		for j in range(5):
+			var platform_num = (i*5)+j+1 
+			var platform = get_node("Platform" + str(platform_num))
+			
+			if platform.placed_offering:
+				var offering = platform.placed_offering
+				platform.placed_offering = null
+				offering.queue_free()
