@@ -144,5 +144,8 @@ func calculated_blood_value(i: int, j: int):
 		added_value += 1
 	if j < 4 and platform_matrix[i][j+1].placed_offering != null and platform_matrix[i][j+1].placed_offering.type == Offering.OfferingType.BLOOD:
 		added_value += 1
+		
+	if platform_matrix[i][j].placed_offering != null:
+		platform_matrix[i][j].placed_offering.set_blood_value(added_value)
 	
 	return added_value

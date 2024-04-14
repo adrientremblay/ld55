@@ -9,6 +9,7 @@ var can_be_dragged = false
 var in_trash = false
 var type: OfferingType = OfferingType.CANDLE
 var value = 1
+var blood_value = 0
 
 enum OfferingType {
 	CANDLE,
@@ -127,4 +128,8 @@ func find_closet_platform_entered():
 
 func set_value(value: int):
 	self.value = value
-	$ValueLabel.text = str(value)
+	$ValueLabel.text = str(value + blood_value)
+	
+func set_blood_value(blood_value: int):
+	self.blood_value = blood_value
+	$ValueLabel.text = str(value + blood_value)
