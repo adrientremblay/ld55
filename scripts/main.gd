@@ -37,6 +37,7 @@ func load_demon(demon: Demon, level_number: int):
 	levelLabel.text = "Level " + str(level_number)
 	
 	$Altar.set_answers(demon.rows, demon.cols)
+	$Grimoire/InstructionsContainer/InstructionsDescription.text = demon.instructions
 
 func _on_object_spawner_altar_check() -> void:
 	if $Altar.check_puzzle_completion():

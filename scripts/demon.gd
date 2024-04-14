@@ -13,6 +13,8 @@ var rng = RandomNumberGenerator.new()
 func _init(level, name, description, cols, rows, lines, instructions):
 	self.name = name
 	self.description = description
+	self.level = level
+	self.instructions = instructions
 	
 	if cols != null and rows != null:
 		self.cols = cols
