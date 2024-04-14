@@ -18,6 +18,7 @@ enum OfferingType {
 signal check_if_puzzle_complete
 
 func set_type(type: OfferingType):
+	self.type = type
 	match type:
 		OfferingType.CANDLE:
 			$AnimatedSprite2D.play("candle")

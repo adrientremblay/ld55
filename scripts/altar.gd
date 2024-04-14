@@ -47,8 +47,17 @@ func update_col_labels():
 		
 		for platform_i in range(5):
 			var platform = platform_matrix[platform_i][col]
-			if (platform.placed_offering != null):
-				col_count+=1;
+			if (platform.placed_offering == null):
+				continue
+				
+			var platform_value
+			match platform.placed_offering.type:
+				Offering.OfferingType.CANDLE:
+					platform_value = 1
+				Offering.OfferingType.SKULL:
+					platform_value = 2
+			
+			col_count += platform_value
 		
 		var label = col_labels[col]
 		label.text = str(col_count)
@@ -59,8 +68,17 @@ func update_row_labels():
 		
 		for platform_i in range(5):
 			var platform = platform_matrix[row][platform_i]
-			if (platform.placed_offering != null):
-				row_count+=1;
+			if (platform.placed_offering == null):
+				continue
+				
+			var platform_value
+			match platform.placed_offering.type:
+				Offering.OfferingType.CANDLE:
+					platform_value = 1
+				Offering.OfferingType.SKULL:
+					platform_value = 2
+			
+			row_count += platform_value
 		
 		var label = row_labels[row]
 		label.text = str(row_count)
