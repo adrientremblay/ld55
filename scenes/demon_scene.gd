@@ -22,11 +22,13 @@ func _process(delta: float) -> void:
 			$SpeechBubble.text = demon.lines[line_i]
 	
 func summon(demon: Demon):
+	Global.game_paused = true
 	self.demon = demon
 	visible = true
 	line_i = 0
 	$SpeechBubble.text = demon.lines[line_i]
 
 func banish():
+	Global.game_paused = false
 	visible = false
 	next_level.emit()

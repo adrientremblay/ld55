@@ -13,6 +13,9 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _process(delta: float) -> void: # TODO: this func is a bit messy
+	if Global.game_paused:
+		return
+	
 	if Input.is_action_just_pressed("click") and can_be_dragged:
 		offset = get_global_mouse_position() - global_position
 		initial_pos = global_position

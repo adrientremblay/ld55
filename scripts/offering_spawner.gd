@@ -14,6 +14,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Global.game_paused:
+		return
+	
 	if (Input.is_action_just_pressed("click") and can_spawn):
 		var object_instance = object_scene.instantiate()
 		object_instance.global_position = get_global_mouse_position()
