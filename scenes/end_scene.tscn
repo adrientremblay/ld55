@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciy18wkmjqixj"]
+[gd_scene load_steps=10 format=3 uid="uid://ciy18wkmjqixj"]
 
 [ext_resource type="Script" path="res://scenes/end_scene.gd" id="1_2plby"]
 [ext_resource type="Texture2D" uid="uid://chl6wxewawcnv" path="res://assets/images/end_screen.png" id="1_ck8mw"]
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="2_qnbya"]
 [ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="4_3k4o3"]
 [ext_resource type="Texture2D" uid="uid://cja7hn53k8y7b" path="res://assets/images/end_screen_no_demon.png" id="5_7vqm2"]
+[ext_resource type="AudioStream" uid="uid://doomkh24ntrvp" path="res://assets/audio/music/intro.mp3" id="6_2maxk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i61hv"]
 font = ExtResource("2_qnbya")
@@ -107,3 +108,8 @@ label_settings = SubResource("LabelSettings_h4emr")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2maxk")
+volume_db = -5.0
+autoplay = true
