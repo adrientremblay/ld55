@@ -65,11 +65,12 @@ func _process(delta: float) -> void: # TODO: this func is a bit messy
 			tween.tween_property(self, "global_position", platforms_entered[0].global_position, 0.2).set_ease(Tween.EASE_OUT)
 			platforms_entered[0].placed_offering = self
 			check_if_puzzle_complete.emit()
-		elif initial_pos != null:
+		elif old_platform!= null:
 			tween.tween_property(self, "global_position", initial_pos, 0.2).set_ease(Tween.EASE_OUT)
 			if old_platform != null:
 				old_platform.placed_offering = self
 		elif old_platform == null:
+			return_offering.emit()
 			queue_free()
 
 func _on_area_2d_mouse_entered() -> void:

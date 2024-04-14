@@ -48,7 +48,7 @@ func load_demon(demon: Demon, level_number: int):
 	$CandleSpawner.setLabel()
 	
 	$SkullSpawner.total_offerings = demon.required_offerings[1]
-	$CandleSpawner.setLabel()
+	$SkullSpawner.setLabel()
 
 func _on_object_spawner_altar_check() -> void:
 	if $Altar.check_puzzle_completion():

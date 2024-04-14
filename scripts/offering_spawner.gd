@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 	if Global.game_paused or not visible:
 		return
 	
-	if (Input.is_action_just_pressed("click") and can_spawn):
+	if (Input.is_action_just_pressed("click") and can_spawn and total_offerings > 0):
 		var object_instance = object_scene.instantiate()
 		object_instance.set_type(type)
 		object_instance.global_position = get_global_mouse_position()
