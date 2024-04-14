@@ -21,7 +21,7 @@ func _on_object_spawner_spawn_object(object: Variant) -> void:
 	add_child(object)
 
 func make_levels():
-	demons_to_summon.append(Demon.new("Abaddon", "Demon of Desolation and Ruin", null, null, []))
+	demons_to_summon.append(Demon.new("Abaddon", "Demon of Desolation and Ruin", null, null, ["I am Abaddon! Am I the first demon you've ever seen?", "swag"]))
 	demons_to_summon.append(Demon.new("Moloch", "Demon of Wrath and Violence", null, null, []))
 	demons_to_summon.append(Demon.new("Astaroth", "Demon of Vanity and Envy", null, null, []))
 	#demons_to_summon.append(Demon.new("Belial", "Demon of Lawlessness and Corruption", null, null, []))
