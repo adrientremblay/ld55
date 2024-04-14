@@ -3,9 +3,9 @@ extends Node2D
 var debug_mode = true
 var demons_to_summon: Array[Demon]
 var current_demon = 0
-@onready var demonNameLabel: Label = $Grimoire/DemonName
-@onready var demonDescription: Label = $Grimoire/Description
-@onready var levelLabel: Label = $Grimoire/LevelLabel
+@onready var demonNameLabel: Label = $Grimoire/Info/DemonName
+@onready var demonDescription: Label = $Grimoire/Info/Description
+@onready var levelLabel: Label = $Grimoire/Info/LevelLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

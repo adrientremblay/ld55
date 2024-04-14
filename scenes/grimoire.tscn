@@ -19,24 +19,32 @@ font_size = 20
 font = ExtResource("2_4pi10")
 font_size = 34
 
-[node name="Grimoire" type="VBoxContainer"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 191.0
 offset_right = 360.0
-offset_bottom = 723.0
+offset_bottom = 191.0
 
-[node name="CurrentDemon" type="Label" parent="."]
+[node name="Info" type="VBoxContainer" parent="."]
+offset_top = -192.0
+offset_right = 360.0
+offset_bottom = 188.0
+
+[node name="CurrentDemon" type="Label" parent="Info"]
 layout_mode = 2
 text = "current demon:"
 label_settings = SubResource("LabelSettings_4aep2")
 horizontal_alignment = 1
 
-[node name="DemonName" type="Label" parent="."]
+[node name="DemonName" type="Label" parent="Info"]
 layout_mode = 2
 text = "Demon Name"
 label_settings = SubResource("LabelSettings_bxfn2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="Label" parent="."]
+[node name="Description" type="Label" parent="Info"]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Breif one sentence description of demon."
@@ -44,7 +52,7 @@ label_settings = SubResource("LabelSettings_hqhox")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="LevelLabel" type="Label" parent="."]
+[node name="LevelLabel" type="Label" parent="Info"]
 layout_mode = 2
 text = "Level 1"
 label_settings = SubResource("LabelSettings_2i87p")
