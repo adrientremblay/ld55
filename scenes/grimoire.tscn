@@ -62,9 +62,9 @@ horizontal_alignment = 1
 [node name="InstructionsContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 26.0
-offset_top = 162.0
+offset_top = 315.0
 offset_right = 325.0
-offset_bottom = 529.0
+offset_bottom = 514.0
 
 [node name="Instructions" type="Label" parent="InstructionsContainer"]
 layout_mode = 2
