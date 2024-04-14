@@ -60,6 +60,7 @@ func generate_puzzle(level):
 				total_skulls += 1
 			elif rng.randf() < candle_density:
 				placed_offering_value = 1
+				total_candles += 1
 			
 			rows[i] += placed_offering_value
 			cols[j] += placed_offering_value

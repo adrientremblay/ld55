@@ -8,6 +8,7 @@ var can_spawn = false
 var candles_texture: Texture2D = load("res://assets/images/candle_crate.png")
 var skulls_texture:Texture2D = load("res://assets/images/pile_of_bones.png")
 var total_offerings = 0
+var offering_name
 
 signal altar_check
 
@@ -16,10 +17,10 @@ func _ready() -> void:
 	match type:
 		Offering.OfferingType.CANDLE:
 			$Sprite2D.texture = candles_texture
-			$Label.text = "candles"
+			offering_name = "candles"
 		Offering.OfferingType.SKULL:
 			$Sprite2D.texture = skulls_texture
-			$Label.text = "skulls"
+			offering_name = "skulls"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,6 +34,9 @@ func _process(delta: float) -> void:
 		object_instance.being_dragged = true
 		object_instance.check_if_puzzle_complete.connect(ask_altar_to_check_game_completion)
 		spawn_object.emit(object_instance)
+		
+		total_offerings -=1
+		setLabel()
 
 func _on_area_2d_mouse_entered() -> void:
 	can_spawn = true
@@ -44,3 +48,6 @@ func ask_altar_to_check_game_completion():
 func _on_area_2d_mouse_exited() -> void:
 	can_spawn = false
 	scale = Vector2(1.0,1.0)
+
+func setLabel():
+	$Label.text = offering_name + " (" + str(total_offerings) + ")"
