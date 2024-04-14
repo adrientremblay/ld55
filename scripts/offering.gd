@@ -12,7 +12,7 @@ signal check_if_puzzle_complete
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _process(delta: float) -> void:
+func _process(delta: float) -> void: # TODO: this func is a bit messy
 	if Input.is_action_just_pressed("click") and can_be_dragged:
 		offset = get_global_mouse_position() - global_position
 		initial_pos = global_position
@@ -25,7 +25,13 @@ func _process(delta: float) -> void:
 	elif being_dragged and Input.is_action_just_released("click"):
 		being_dragged = false
 		var tween = get_tree().create_tween()
-		if platforms_entered.size() == 1 and platforms_entered[0].placed_offering == null:
+		if platforms_entered.size() > 1:
+			var new_platform = find_closet_platform_entered()
+			if (new_platform != null):
+				tween.tween_property(self, "global_position", new_platform.global_position, 0.2).set_ease(Tween.EASE_OUT)
+				new_platform.placed_offering = self
+				check_if_puzzle_complete.emit()
+		elif platforms_entered.size() == 1 and platforms_entered[0].placed_offering == null:
 			tween.tween_property(self, "global_position", platforms_entered[0].global_position, 0.2).set_ease(Tween.EASE_OUT)
 			platforms_entered[0].placed_offering = self
 			check_if_puzzle_complete.emit()
@@ -54,3 +60,19 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	platforms_entered.erase(body)
 	body.modulate = Color(Color.WHITE, 1.0)
+	
+func find_closet_platform_entered():
+	var closest_distance = -1.0
+	var closest_platform = null
+	
+	for platform in platforms_entered:
+		if platform.placed_offering != null:
+			continue
+		
+		var distance_vector = platform.get_global_position() - self.get_global_position()
+		var distance_magnitude = distance_vector.length()
+		if closest_distance == -1.0 or closest_distance > distance_magnitude:
+			closest_distance = distance_magnitude
+			closest_platform = platform
+		
+	return closest_platform
