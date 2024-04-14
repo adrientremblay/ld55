@@ -5,11 +5,12 @@ var demons_to_summon: Array[Demon]
 var current_demon = 0
 @onready var demonNameLabel: Label = $Grimoire/DemonName
 @onready var demonDescription: Label = $Grimoire/Description
+@onready var levelLabel: Label = $Grimoire/LevelLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	make_levels()
-	load_demon(demons_to_summon[current_demon])
+	load_demon(demons_to_summon[current_demon], 1)
 	$DemonScene.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,9 +31,10 @@ func make_levels():
 	#demons_to_summon.append(Demon.new("Beelzebub", "Demon of Gluttony and Excess", null, null))
 	#demons_to_summon.append(Demon.new("Asmodeus", "Demon of Lust and Temptation", null, null))
 
-func load_demon(demon: Demon):
+func load_demon(demon: Demon, level_number: int):
 	demonNameLabel.text = demon.name
 	demonDescription.text = demon.description
+	levelLabel.text = "Level " + str(level_number)
 	
 	$Altar.set_answers(demon.rows, demon.cols)
 
@@ -49,6 +51,6 @@ func level_complete():
 func _on_demon_scene_next_level() -> void:
 	current_demon +=1
 	if current_demon < demons_to_summon.size():
-		load_demon(demons_to_summon[current_demon])	
+		load_demon(demons_to_summon[current_demon], current_demon+1)	
 	else:
 		get_tree().change_scene_to_file("res://scenes/end_scene.tscn")

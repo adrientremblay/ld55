@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://h5uegdst2jew"]
+[gd_scene load_steps=7 format=3 uid="uid://h5uegdst2jew"]
 
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_6jvyd"]
+[ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_4pi10"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4aep2"]
 font = ExtResource("1_6jvyd")
@@ -8,10 +9,15 @@ font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_bxfn2"]
 font = ExtResource("1_6jvyd")
-font_size = 40
+font_size = 60
 
 [sub_resource type="LabelSettings" id="LabelSettings_hqhox"]
 font = ExtResource("1_6jvyd")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_2i87p"]
+font = ExtResource("2_4pi10")
+font_size = 34
 
 [node name="Grimoire" type="VBoxContainer"]
 offset_right = 360.0
@@ -32,9 +38,14 @@ vertical_alignment = 1
 
 [node name="Description" type="Label" parent="."]
 layout_mode = 2
-size_flags_vertical = 3
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus eu risus eu convallis. Vivamus nec blandit ex. Nam iaculis aliquam turpis. Quisque vehicula sagittis orci, eu aliquet lacus pellentesque vitae. Praesent vel iaculis ex. Maecenas pretium urna sodales, placerat erat vel, rhoncus justo. Praesent auctor ornare turpis, vel rutrum enim rutrum eu. Quisque lacus justo, sodales et nulla at, hendrerit semper metus. Phasellus pretium sem sed mi ullamcorper elementum. Nunc in quam neque. Phasellus eu sapien lacinia nibh lacinia bibendum fermentum in leo. Phasellus id auctor odio. Duis sit amet neque faucibus, mattis arcu ut, consectetur nisi."
+size_flags_vertical = 0
+text = "Breif one sentence description of demon."
 label_settings = SubResource("LabelSettings_hqhox")
 horizontal_alignment = 1
 autowrap_mode = 2
-clip_text = true
+
+[node name="LevelLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Level 1"
+label_settings = SubResource("LabelSettings_2i87p")
+horizontal_alignment = 1
