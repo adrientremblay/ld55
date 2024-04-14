@@ -3,6 +3,8 @@ extends Control
 var demon: Demon
 var line_i = 0
 
+signal next_level
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$DemonFace.play()
@@ -27,4 +29,4 @@ func summon(demon: Demon):
 
 func banish():
 	visible = false
-	# TODO load next level
+	next_level.emit()

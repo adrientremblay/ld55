@@ -31,3 +31,4 @@ visible = false
 
 [connection signal="altar_check" from="ObjectSpawner" to="." method="_on_object_spawner_altar_check"]
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
+[connection signal="next_level" from="DemonScene" to="." method="_on_demon_scene_next_level"]

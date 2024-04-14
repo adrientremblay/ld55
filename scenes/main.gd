@@ -43,3 +43,8 @@ func _on_object_spawner_altar_check() -> void:
 func level_complete():
 	var demon = demons_to_summon[current_demon]
 	$DemonScene.summon(demon)
+
+func _on_demon_scene_next_level() -> void:
+	current_demon +=1
+	if current_demon < demons_to_summon.size():
+		load_demon(demons_to_summon[current_demon])	
