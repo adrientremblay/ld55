@@ -5,10 +5,12 @@ var description: String
 var cols: Array
 var rows: Array
 var lines: Array
+var instructions: String
+var level: int #ised for the difficulty calculation
 
 var rng = RandomNumberGenerator.new()
 
-func _init(name, description, cols, rows, lines):
+func _init(level, name, description, cols, rows, lines, instructions):
 	self.name = name
 	self.description = description
 	
