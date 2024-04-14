@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ciy18wkmjqixj"]
+[gd_scene load_steps=9 format=3 uid="uid://ciy18wkmjqixj"]
 
 [ext_resource type="Script" path="res://scenes/end_scene.gd" id="1_2plby"]
 [ext_resource type="Texture2D" uid="uid://chl6wxewawcnv" path="res://assets/images/end_screen.png" id="1_ck8mw"]
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="2_qnbya"]
+[ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="4_3k4o3"]
+[ext_resource type="Texture2D" uid="uid://cja7hn53k8y7b" path="res://assets/images/end_screen_no_demon.png" id="5_7vqm2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i61hv"]
 font = ExtResource("2_qnbya")
@@ -11,6 +13,10 @@ font_size = 100
 [sub_resource type="LabelSettings" id="LabelSettings_i4ssf"]
 font = ExtResource("2_qnbya")
 font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4emr"]
+font = ExtResource("4_3k4o3")
+font_size = 50
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,7 +37,25 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Slide2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Slide2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ck8mw")
+
+[node name="Label" type="Label" parent="Slide2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -60,18 +84,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 120.0
-offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ck8mw")
+texture = ExtResource("5_7vqm2")
 
-[node name="Slide2" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="continue" type="Label" parent="."]
+[node name="continue" type="Label" parent="Slide1"]
 offset_top = 665.0
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -79,3 +96,14 @@ size_flags_vertical = 8
 text = "[click to continue]"
 label_settings = SubResource("LabelSettings_i4ssf")
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Slide1"]
+offset_left = 96.0
+offset_top = 40.0
+offset_right = 1176.0
+offset_bottom = 394.0
+text = "And so... Cedric Leopold after learning the forbidden knowledge of the afterlife turned around and left the summoning chamber. His fellow summoners lying dead at the foot of the pentagram. The giant face of Lucifer watching him walk away."
+label_settings = SubResource("LabelSettings_h4emr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
