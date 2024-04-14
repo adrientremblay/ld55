@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://h5uegdst2jew" path="res://scenes/grimoire.tscn" id="5_qrky2"]
 [ext_resource type="PackedScene" uid="uid://bbo2kwetjuaqc" path="res://scenes/demon_scene.tscn" id="6_jih8r"]
 [ext_resource type="PackedScene" uid="uid://dqrq8qsn3sx0g" path="res://scenes/trash.tscn" id="7_ipkkk"]
-[ext_resource type="AudioStream" uid="uid://hlv7yviv3yn6" path="res://assets/audio/music/theme.wav" id="8_x1r8j"]
+[ext_resource type="AudioStream" uid="uid://cjr57xstsluql" path="res://assets/audio/music/theme.mp3" id="8_eugvf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p50c6")
@@ -36,7 +36,7 @@ z_index = 4
 position = Vector2(1136, 84)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_x1r8j")
+stream = ExtResource("8_eugvf")
 volume_db = -5.0
 autoplay = true
 

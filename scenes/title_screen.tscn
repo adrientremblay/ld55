@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_kel8b"]
 [ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_jujt7"]
 [ext_resource type="Texture2D" uid="uid://blt0nix8rj3vl" path="res://assets/images/title_screen.png" id="4_avhp4"]
-[ext_resource type="AudioStream" uid="uid://c87r7bxslm8i4" path="res://assets/audio/music/intro.wav" id="5_3fxs8"]
+[ext_resource type="AudioStream" uid="uid://doomkh24ntrvp" path="res://assets/audio/music/intro.mp3" id="5_wu26h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ajpjy"]
 font = ExtResource("1_04yea")
@@ -101,6 +101,6 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_3fxs8")
+stream = ExtResource("5_wu26h")
 volume_db = -5.0
 autoplay = true
