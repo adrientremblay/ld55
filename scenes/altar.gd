@@ -9,11 +9,14 @@ func _ready() -> void:
 	populate_platform_matrix()
 	populate_col_labels()
 	populate_row_labels()
+	update_col_labels()
+	update_row_labels()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	update_col_labels() # TODO: optimization (only run this when offerrings are placed
-	update_row_labels()
+	pass
+	#update_col_labels() # TODO: optimization (only run this when offerrings are placed
+	#update_row_labels()
 
 func populate_platform_matrix():
 	for i in range(5):
@@ -68,9 +71,8 @@ func set_answers(answer_rows: Array, answer_cols: Array):
 		get_node("AnswerRows").get_node("x" + str(i+1)).text = str(answer_rows[i])
 
 func check_puzzle_completion():
-	update_col_labels() # TODO: optimization (only run this when offerrings are placed
+	update_col_labels()
 	update_row_labels()
-	print("checking puzzle completionnn")
 	for i in range(5):
 		var answer_col = get_node("AnswerCols").get_node("y" + str(i+1)).text
 		var col = get_node("cols").get_node("y" + str(i+1)).text
