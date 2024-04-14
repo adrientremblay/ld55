@@ -64,7 +64,7 @@ shape = SubResource("RectangleShape2D_q7qd4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_6o3jd")
-animation = &"candle"
+animation = &"skull"
 
 [node name="ValueLabel" type="Label" parent="."]
 anchors_preset = 8

@@ -29,7 +29,6 @@ func set_type(type: OfferingType):
 
 func _ready() -> void:
 	$AnimatedSprite2D.play()
-	set_type(type)
 	pass # Replace with function body.
 
 func _process(delta: float) -> void: # TODO: this func is a bit messy

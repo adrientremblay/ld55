@@ -17,9 +17,6 @@ modulate = Color(1, 1, 1, 0.611765)
 position = Vector2(364, 64)
 scale = Vector2(1.25, 1.25)
 
-[node name="ObjectSpawner" parent="." instance=ExtResource("3_r0mkk")]
-position = Vector2(1150, 300)
-
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
 offset_right = 1280.0
@@ -40,6 +37,15 @@ stream = ExtResource("8_eugvf")
 volume_db = -5.0
 autoplay = true
 
-[connection signal="altar_check" from="ObjectSpawner" to="." method="_on_object_spawner_altar_check"]
-[connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
+[node name="CandleSpawner" parent="." instance=ExtResource("3_r0mkk")]
+position = Vector2(1150, 300)
+
+[node name="SkullSpawner" parent="." instance=ExtResource("3_r0mkk")]
+position = Vector2(1152, 519)
+type = 1
+
 [connection signal="next_level" from="DemonScene" to="." method="_on_demon_scene_next_level"]
+[connection signal="altar_check" from="CandleSpawner" to="." method="_on_object_spawner_altar_check"]
+[connection signal="spawn_object" from="CandleSpawner" to="." method="_on_object_spawner_spawn_object"]
+[connection signal="altar_check" from="SkullSpawner" to="." method="_on_object_spawner_altar_check"]
+[connection signal="spawn_object" from="SkullSpawner" to="." method="_on_object_spawner_spawn_object"]
