@@ -1,10 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpgdv8fm2wncs"]
+[gd_scene load_steps=13 format=3 uid="uid://cpgdv8fm2wncs"]
 
 [ext_resource type="Script" path="res://scripts/offering.gd" id="1_qdj06"]
 [ext_resource type="Texture2D" uid="uid://c0pu4r2q8futm" path="res://assets/images/candle-Sheet.png" id="2_2vbi8"]
+[ext_resource type="Texture2D" uid="uid://civr7i304tj4h" path="res://assets/images/blood.png" id="2_s8t7k"]
 [ext_resource type="Texture2D" uid="uid://5ch1f26qdv8h" path="res://assets/images/skull.png" id="3_2m5sj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7qd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwijm"]
+atlas = ExtResource("2_s8t7k")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5fu34"]
 atlas = ExtResource("2_2vbi8")
@@ -24,6 +29,14 @@ region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6o3jd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwijm")
+}],
+"loop": true,
+"name": &"blood",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5fu34")
@@ -64,7 +77,7 @@ shape = SubResource("RectangleShape2D_q7qd4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_6o3jd")
-animation = &"skull"
+animation = &"blood"
 
 [node name="ValueLabel" type="Label" parent="."]
 anchors_preset = 8

@@ -56,6 +56,8 @@ func update_col_labels():
 					platform_value = 1
 				Offering.OfferingType.SKULL:
 					platform_value = 2
+				Offering.OfferingType.BLOOD:
+					platform_value = 0 # TODO
 			
 			col_count += platform_value
 		
@@ -77,6 +79,8 @@ func update_row_labels():
 					platform_value = 1
 				Offering.OfferingType.SKULL:
 					platform_value = 2
+				Offering.OfferingType.BLOOD:
+					platform_value = 0 # TODO
 			
 			row_count += platform_value
 		

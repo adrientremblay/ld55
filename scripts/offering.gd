@@ -12,7 +12,8 @@ var value = 1
 
 enum OfferingType {
 	CANDLE,
-	SKULL
+	SKULL,
+	BLOOD
 }
 
 signal check_if_puzzle_complete
@@ -28,6 +29,9 @@ func set_type(type: OfferingType):
 		OfferingType.SKULL:
 			$AnimatedSprite2D.play("skull")
 			set_value(2)
+		OfferingType.BLOOD:
+			$AnimatedSprite2D.play("blood")
+			set_value(0)
 
 func _ready() -> void:
 	$AnimatedSprite2D.play()

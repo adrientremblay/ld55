@@ -40,12 +40,20 @@ func load_demon(demon: Demon, level_number: int):
 		$SkullSpawner.visible = false
 	else:
 		$SkullSpawner.visible = true
+		
+	if level_number < 4:
+		$BloodSpawner.visible = false
+	else:
+		$BloodSpawner.visible = true
 	
 	$CandleSpawner.total_offerings = demon.required_offerings[0]
 	$CandleSpawner.setLabel()
 	
 	$SkullSpawner.total_offerings = demon.required_offerings[1]
 	$SkullSpawner.setLabel()
+	
+	$BloodSpawner.total_offerings = demon.required_offerings[2]
+	$BloodSpawner.setLabel()
 
 func _on_object_spawner_altar_check() -> void:
 	if $Altar.check_puzzle_completion():

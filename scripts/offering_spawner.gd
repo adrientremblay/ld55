@@ -7,6 +7,7 @@ var can_spawn = false
 @export var type: Offering.OfferingType = Offering.OfferingType.CANDLE
 var candles_texture: Texture2D = load("res://assets/images/candle_crate.png")
 var skulls_texture:Texture2D = load("res://assets/images/pile_of_bones.png")
+var blood_cauldron_texture:Texture2D = load("res://assets/images/blood_cauldron.png")
 var total_offerings = 0
 var offering_name
 
@@ -21,6 +22,9 @@ func _ready() -> void:
 		Offering.OfferingType.SKULL:
 			$Sprite2D.texture = skulls_texture
 			offering_name = "skulls"
+		Offering.OfferingType.BLOOD:
+			$Sprite2D.texture = blood_cauldron_texture
+			offering_name = "blood"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
