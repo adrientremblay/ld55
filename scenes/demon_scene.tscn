@@ -149,19 +149,20 @@ offset_top = -19.0
 offset_right = 308.0
 offset_bottom = 13.0
 grow_vertical = 0
-text = "[click to skip]"
+text = "[click to continue]"
 label_settings = SubResource("LabelSettings_hf6am")
 
 [node name="SpeechBubble" type="Label" parent="."]
 modulate = Color(1, 1, 0, 1)
 layout_mode = 0
-offset_left = 1.0
+offset_left = 45.0
 offset_top = 589.0
-offset_right = 1278.0
+offset_right = 1231.0
 offset_bottom = 754.0
 text = "HELLO I AM A DEMON!!!HELLO I AM A DEMON!!!HELLO I AM A DEMON!!!HELLO I AM A DEMON!!!"
 label_settings = SubResource("LabelSettings_tnlri")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="SummonSound" type="AudioStreamPlayer" parent="."]
