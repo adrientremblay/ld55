@@ -17,7 +17,7 @@ position = Vector2(364, 64)
 scale = Vector2(1.25, 1.25)
 
 [node name="ObjectSpawner" parent="." instance=ExtResource("3_r0mkk")]
-position = Vector2(1121, 586)
+position = Vector2(1150, 300)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
@@ -32,7 +32,7 @@ visible = false
 z_index = 4
 
 [node name="Trash" parent="." instance=ExtResource("7_ipkkk")]
-position = Vector2(1154, 177)
+position = Vector2(1136, 84)
 
 [connection signal="altar_check" from="ObjectSpawner" to="." method="_on_object_spawner_altar_check"]
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]
