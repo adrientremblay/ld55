@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://b4usyu7c13fnc" path="res://assets/images/candle_crate.png" id="1_dt0ff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crckn"]
-size = Vector2(107.333, 55.7333)
+size = Vector2(107.333, 102)
 
 [node name="ObjectSpawner" type="Node2D"]
 script = ExtResource("1_8hn2i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(5, 5)
+scale = Vector2(4.5, 4.5)
 texture = ExtResource("1_dt0ff")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.499996, 41.2)
+position = Vector2(-0.499996, 6.5)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_crckn")
 
