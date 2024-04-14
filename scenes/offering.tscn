@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7qd4"]
 
-[node name="Offering" type="Node2D"]
+[node name="Offering" type="Node2D" groups=["droppable"]]
 script = ExtResource("1_qdj06")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

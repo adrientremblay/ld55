@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqrq8qsn3sx0g"]
+[gd_scene load_steps=5 format=3 uid="uid://dqrq8qsn3sx0g"]
 
 [ext_resource type="Texture2D" uid="uid://cv170jh3k20ma" path="res://assets/images/trash.png" id="1_56ui6"]
+[ext_resource type="Script" path="res://scripts/trash.gd" id="1_kx6fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qia7o"]
+size = Vector2(120, 119)
 
 [sub_resource type="LabelSettings" id="LabelSettings_hhjrm"]
 font_size = 24
 
-[node name="Trash" type="Node2D"]
+[node name="Trash" type="StaticBody2D" groups=["trash"]]
+script = ExtResource("1_kx6fv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_qia7o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)

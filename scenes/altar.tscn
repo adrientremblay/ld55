@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cy3mptasstq5l"]
 
 [ext_resource type="PackedScene" uid="uid://ci3or73yh7txj" path="res://scenes/platform.tscn" id="1_i1ljc"]
-[ext_resource type="Script" path="res://scenes/altar.gd" id="1_ioxvw"]
+[ext_resource type="Script" path="res://scripts/altar.gd" id="1_ioxvw"]
 
 [node name="Altar" type="Node2D"]
 scale = Vector2(1.5, 1.5)

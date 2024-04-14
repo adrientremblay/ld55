@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bbo2kwetjuaqc"]
 
 [ext_resource type="Texture2D" uid="uid://crmisd5rntwpl" path="res://assets/images/demon1-Sheet.png" id="1_vk3n7"]
-[ext_resource type="Script" path="res://scenes/demon_scene.gd" id="1_xw2gr"]
+[ext_resource type="Script" path="res://scripts/demon_scene.gd" id="1_xw2gr"]
 [ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="2_kprho"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7idv"]

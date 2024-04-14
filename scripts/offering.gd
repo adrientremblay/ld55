@@ -6,6 +6,7 @@ var offset: Vector2
 var initial_pos
 var being_dragged = false
 var can_be_dragged = false
+var in_trash = false
 
 signal check_if_puzzle_complete
 
@@ -28,7 +29,10 @@ func _process(delta: float) -> void: # TODO: this func is a bit messy
 	elif being_dragged and Input.is_action_just_released("click"):
 		being_dragged = false
 		var tween = get_tree().create_tween()
-		if platforms_entered.size() > 1:
+		if in_trash:
+			self.queue_free()
+			return	
+		elif platforms_entered.size() > 1:
 			var new_platform = find_closet_platform_entered()
 			if (new_platform != null):
 				tween.tween_property(self, "global_position", new_platform.global_position, 0.2).set_ease(Tween.EASE_OUT)
@@ -54,6 +58,11 @@ func _on_area_2d_mouse_exited() -> void:
 	scale = Vector2(1.0, 1.0)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("trash"):
+		in_trash = true
+		print("in trash")
+		return
+	
 	if not body.is_in_group("droppable"):
 		return
 		
@@ -61,6 +70,13 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	platforms_entered.append(body)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("trash"):
+		in_trash = false
+		return
+	
+	if not body.is_in_group("droppable"):
+		return
+	
 	platforms_entered.erase(body)
 	body.modulate = Color(Color.WHITE, 1.0)
 	

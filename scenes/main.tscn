@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dft06i0o7a16r"]
 
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_p50c6"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
 [ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/offering_spawner.tscn" id="3_r0mkk"]
 [ext_resource type="Texture2D" uid="uid://b2pi2pwbsw77p" path="res://assets/images/table.png" id="4_6om3k"]

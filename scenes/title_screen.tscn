@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dy6bcdfq4xpc6"]
 
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_04yea"]
-[ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_kel8b"]
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_kel8b"]
 [ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_jujt7"]
 [ext_resource type="Texture2D" uid="uid://blt0nix8rj3vl" path="res://assets/images/title_screen.png" id="4_avhp4"]
 
