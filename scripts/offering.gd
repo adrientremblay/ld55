@@ -16,6 +16,7 @@ enum OfferingType {
 }
 
 signal check_if_puzzle_complete
+signal return_offering
 
 func set_type(type: OfferingType):
 	self.type = type
@@ -30,7 +31,6 @@ func set_type(type: OfferingType):
 
 func _ready() -> void:
 	$AnimatedSprite2D.play()
-	pass # Replace with function body.
 
 func _process(delta: float) -> void: # TODO: this func is a bit messy
 	if Global.game_paused:
@@ -52,6 +52,7 @@ func _process(delta: float) -> void: # TODO: this func is a bit messy
 			if old_platform != null:
 				old_platform.placed_offering = null
 			check_if_puzzle_complete.emit()
+			return_offering.emit()
 			self.queue_free()
 			return	
 		elif platforms_entered.size() > 1:

@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 		object_instance.global_position = get_global_mouse_position()
 		object_instance.being_dragged = true
 		object_instance.check_if_puzzle_complete.connect(ask_altar_to_check_game_completion)
+		object_instance.return_offering.connect(return_offering)
 		spawn_object.emit(object_instance)
 		
 		total_offerings -=1
@@ -51,3 +52,7 @@ func _on_area_2d_mouse_exited() -> void:
 
 func setLabel():
 	$Label.text = offering_name + " (" + str(total_offerings) + ")"
+
+func return_offering():
+	total_offerings += 1
+	setLabel()
