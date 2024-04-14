@@ -31,7 +31,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_i18yd")
 }],
 "loop": true,
-"name": &"demon1",
+"name": &"Abaddon",
 "speed": 5.0
 }, {
 "frames": [{
@@ -42,7 +42,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3lvnw")
 }],
 "loop": true,
-"name": &"demon2",
+"name": &"Moloch",
 "speed": 5.0
 }]
 
@@ -75,7 +75,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(648, 298)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_2gw6p")
-animation = &"demon2"
+animation = &"Abaddon"
 
 [node name="SkipText" type="Label" parent="."]
 layout_mode = 1
