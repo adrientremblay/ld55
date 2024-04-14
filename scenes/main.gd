@@ -21,14 +21,14 @@ func _on_object_spawner_spawn_object(object: Variant) -> void:
 	add_child(object)
 
 func make_levels():
-	demons_to_summon.append(Demon.new("Abaddon", "Demon of Desolation and Ruin", null, null))
-	demons_to_summon.append(Demon.new("Moloch", "Demon of Wrath and Violence", null, null))
-	demons_to_summon.append(Demon.new("Astaroth", "Demon of Vanity and Envy", null, null))
-	demons_to_summon.append(Demon.new("Belial", "Demon of Lawlessness and Corruption", null, null))
-	demons_to_summon.append(Demon.new("Lilith ", "Demon of Deception and Betrayal", null, null))
-	demons_to_summon.append(Demon.new("Leviathan", "Demon of Chaos and Destruction", null, null))
-	demons_to_summon.append(Demon.new("Beelzebub", "Demon of Gluttony and Excess", null, null))
-	demons_to_summon.append(Demon.new("Asmodeus", "Demon of Lust and Temptation", null, null))
+	demons_to_summon.append(Demon.new("Abaddon", "Demon of Desolation and Ruin", null, null, []))
+	demons_to_summon.append(Demon.new("Moloch", "Demon of Wrath and Violence", null, null, []))
+	demons_to_summon.append(Demon.new("Astaroth", "Demon of Vanity and Envy", null, null, []))
+	#demons_to_summon.append(Demon.new("Belial", "Demon of Lawlessness and Corruption", null, null, []))
+	#demons_to_summon.append(Demon.new("Lilith ", "Demon of Deception and Betrayal", null, null, []))
+	#demons_to_summon.append(Demon.new("Leviathan", "Demon of Chaos and Destruction", null, null, []))
+	#demons_to_summon.append(Demon.new("Beelzebub", "Demon of Gluttony and Excess", null, null))
+	#demons_to_summon.append(Demon.new("Asmodeus", "Demon of Lust and Temptation", null, null))
 
 func load_demon(demon: Demon):
 	demonNameLabel.text = demon.name
@@ -42,5 +42,4 @@ func _on_object_spawner_altar_check() -> void:
 
 func level_complete():
 	var demon = demons_to_summon[current_demon]
-	$DemonScene.visible = true
-	$DemonScene/SpeechBubble.text = demon.description
+	$DemonScene.summon(demon)

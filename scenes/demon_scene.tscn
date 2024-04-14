@@ -55,7 +55,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(648, 298)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_2gw6p")
-frame_progress = 0.74984
+frame_progress = 0.437312
 
 [node name="SkipText" type="Label" parent="."]
 layout_mode = 1

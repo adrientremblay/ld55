@@ -4,12 +4,14 @@ var name: String
 var description: String
 var cols: Array
 var rows: Array
+var lines: Array
 
 var rng = RandomNumberGenerator.new()
 
-func _init(name, description, cols, rows):
+func _init(name, description, cols, rows, lines):
 	self.name = name
 	self.description = description
+	
 	if cols != null and rows != null:
 		self.cols = cols
 		self.rows = rows
@@ -17,6 +19,11 @@ func _init(name, description, cols, rows):
 		var puzzle = generate_puzzle()
 		self.rows = puzzle[0]
 		self.cols = puzzle[1]
+	
+	if lines.size() != 0:
+		self.lines = lines
+	else:
+		self.lines = ["Hello I am a demon"]
 
 func generate_puzzle():
 	var rows = [0,0,0,0,0]
