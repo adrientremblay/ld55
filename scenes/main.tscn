@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dft06i0o7a16r"]
+[gd_scene load_steps=7 format=3 uid="uid://dft06i0o7a16r"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_p50c6"]
 [ext_resource type="PackedScene" uid="uid://cy3mptasstq5l" path="res://scenes/altar.tscn" id="2_64s2l"]
 [ext_resource type="PackedScene" uid="uid://dbnxiup0a0586" path="res://scenes/offering_spawner.tscn" id="3_r0mkk"]
 [ext_resource type="Texture2D" uid="uid://b2pi2pwbsw77p" path="res://assets/images/table.png" id="4_6om3k"]
 [ext_resource type="PackedScene" uid="uid://h5uegdst2jew" path="res://scenes/grimoire.tscn" id="5_qrky2"]
+[ext_resource type="Texture2D" uid="uid://dycy4yhse4k02" path="res://assets/images/demon1.png" id="6_mb1sc"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p50c6")
@@ -24,5 +25,22 @@ offset_bottom = 720.0
 texture = ExtResource("4_6om3k")
 
 [node name="Grimoire" parent="." instance=ExtResource("5_qrky2")]
+
+[node name="DemonWindow" type="MarginContainer" parent="."]
+visible = false
+offset_left = 365.0
+offset_top = 66.0
+offset_right = 926.0
+offset_bottom = 632.0
+size_flags_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="DemonWindow"]
+layout_mode = 2
+texture = ExtResource("6_mb1sc")
+
+[node name="Label" type="Label" parent="DemonWindow"]
+layout_mode = 2
+text = "YOU HAVE SUMMONED ME MORTAL!!!"
+horizontal_alignment = 1
 
 [connection signal="spawn_object" from="ObjectSpawner" to="." method="_on_object_spawner_spawn_object"]

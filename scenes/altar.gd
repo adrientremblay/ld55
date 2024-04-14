@@ -66,3 +66,11 @@ func set_answers(answer_rows: Array, answer_cols: Array):
 	for i in range(5):
 		get_node("AnswerCols").get_node("y" + str(i+1)).text = str(answer_cols[i])
 		get_node("AnswerRows").get_node("x" + str(i+1)).text = str(answer_rows[i])
+
+func check_puzzle_completion():
+	for i in range(5):
+		if get_node("AnswerCols").get_node("y" + str(i+1)).text != get_node("cols").get_node("y" + str(i+1)).text:
+			return false
+		if get_node("AnswerRows").get_node("x" + str(i+1)).text != get_node("rows").get_node("x" + str(i+1)).text:
+			return false
+	return true

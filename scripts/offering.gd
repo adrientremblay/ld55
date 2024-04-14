@@ -7,6 +7,8 @@ var initial_pos
 var being_dragged = false
 var can_be_dragged = false
 
+signal check_if_puzzle_complete
+
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -26,6 +28,7 @@ func _process(delta: float) -> void:
 		if platforms_entered.size() == 1 and platforms_entered[0].placed_offering == null:
 			tween.tween_property(self, "global_position", platforms_entered[0].global_position, 0.2).set_ease(Tween.EASE_OUT)
 			platforms_entered[0].placed_offering = self
+			check_if_puzzle_complete.emit()
 		elif initial_pos != null:
 			tween.tween_property(self, "global_position", initial_pos, 0.2).set_ease(Tween.EASE_OUT)
 			if old_platform != null:

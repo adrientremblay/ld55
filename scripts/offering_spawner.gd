@@ -16,11 +16,14 @@ func _process(delta: float) -> void:
 		var object_instance = object_scene.instantiate()
 		object_instance.global_position = get_global_mouse_position()
 		object_instance.being_dragged = true
+		object_instance.check_if_puzzle_complete.connect(ask_altar_to_check_game_completion)
 		spawn_object.emit(object_instance)
 
 func _on_area_2d_mouse_entered() -> void:
 	can_spawn = true
 
+func ask_altar_to_check_game_completion():
+	print("ask altar")
 
 func _on_area_2d_mouse_exited() -> void:
 	can_spawn = false

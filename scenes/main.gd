@@ -32,3 +32,6 @@ func load_demon(demon: Demon):
 	demonDescription.text = demon.description
 	
 	$Altar.set_answers(demon.rows, demon.cols)
+
+func _on_object_check_if_puzzle_complete() -> void:
+	print('checking')
