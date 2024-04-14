@@ -49,6 +49,9 @@ func _process(delta: float) -> void: # TODO: this func is a bit messy
 		being_dragged = false
 		var tween = get_tree().create_tween()
 		if in_trash:
+			if old_platform != null:
+				old_platform.placed_offering = null
+			check_if_puzzle_complete.emit()
 			self.queue_free()
 			return	
 		elif platforms_entered.size() > 1:
