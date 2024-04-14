@@ -7,11 +7,29 @@ var initial_pos
 var being_dragged = false
 var can_be_dragged = false
 var in_trash = false
+var type: OfferingType = OfferingType.CANDLE
+var value = 1
+
+enum OfferingType {
+	CANDLE,
+	SKULL
+}
 
 signal check_if_puzzle_complete
 
+func set_type(type: OfferingType):
+	match type:
+		OfferingType.CANDLE:
+			$AnimatedSprite2D.play("candle")
+			value = 1
+			set_value(1)
+		OfferingType.SKULL:
+			$AnimatedSprite2D.play("skull")
+			set_value(2)
+
 func _ready() -> void:
 	$AnimatedSprite2D.play()
+	set_type(type)
 	pass # Replace with function body.
 
 func _process(delta: float) -> void: # TODO: this func is a bit messy
@@ -97,3 +115,7 @@ func find_closet_platform_entered():
 			closest_platform = platform
 		
 	return closest_platform
+
+func set_value(value: int):
+	self.value = value
+	$ValueLabel.text = str(value)
