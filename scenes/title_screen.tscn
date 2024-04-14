@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dy6bcdfq4xpc6"]
+[gd_scene load_steps=11 format=3 uid="uid://dy6bcdfq4xpc6"]
 
 [ext_resource type="FontFile" uid="uid://b3quk5mq2160f" path="res://assets/fonts/DUKEPLUS.TTF" id="1_04yea"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_kel8b"]
 [ext_resource type="FontFile" uid="uid://kdp07euhvpmi" path="res://assets/fonts/Cup and Talon.ttf" id="2_jujt7"]
 [ext_resource type="Texture2D" uid="uid://blt0nix8rj3vl" path="res://assets/images/title_screen.png" id="4_avhp4"]
+[ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="5_ii7dy"]
 [ext_resource type="AudioStream" uid="uid://doomkh24ntrvp" path="res://assets/audio/music/intro.mp3" id="5_wu26h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ajpjy"]
@@ -13,6 +14,10 @@ font_size = 40
 [sub_resource type="LabelSettings" id="LabelSettings_dmwv7"]
 font = ExtResource("2_jujt7")
 font_size = 150
+
+[sub_resource type="LabelSettings" id="LabelSettings_od67r"]
+font = ExtResource("5_ii7dy")
+font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_0k0s3"]
 font = ExtResource("2_jujt7")
@@ -45,7 +50,6 @@ label_settings = SubResource("LabelSettings_ajpjy")
 horizontal_alignment = 1
 
 [node name="Slide1" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -67,6 +71,17 @@ label_settings = SubResource("LabelSettings_dmwv7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label" type="Label" parent="Slide1"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 264.0
+offset_right = 834.0
+offset_bottom = 407.0
+text = "A game by Adrien Tremblay"
+label_settings = SubResource("LabelSettings_od67r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Slide2" type="Control" parent="."]
 visible = false
 layout_mode = 1
@@ -82,13 +97,14 @@ offset_left = 96.0
 offset_top = 40.0
 offset_right = 1176.0
 offset_bottom = 394.0
-text = "It is the year 1329.  Science has answered many questions, but not the questions of the soul.  The church claim to have answers but offer no proof.  God nor angels answer to petty summons.  Those thirsty for the cosmic knowledge are forced to turn to demons."
+text = "It is the year 1329.  Science has answered many questions, but not the questions of the soul.  The church claims to have answers, but offer no proof.  God and his angels do not answer to petty summons.  Those thirsty for supernatural cosmic knowledge are forced to turn to demons."
 label_settings = SubResource("LabelSettings_0k0s3")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Slide3" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,7 +118,7 @@ offset_left = 83.0
 offset_top = 81.0
 offset_right = 1163.0
 offset_bottom = 282.0
-text = "You are Cedric Leopold. The founder of the society of the Dark Altar. The solar eclipse is in the sky. You must summon all five  demons of the Apocalyse to get the answers you need."
+text = "You are Cedric Leopold. The founder of the society of the Dark Altar. The solar eclipse is in the sky. Now is your chance to summon demons to obtain the knowledge you seek."
 label_settings = SubResource("LabelSettings_0k0s3")
 horizontal_alignment = 1
 vertical_alignment = 1
