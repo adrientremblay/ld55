@@ -1,5 +1,6 @@
 extends Node2D
 
+var debug_mode = true
 var demons_to_summon: Array[Demon]
 var current_demon = 0
 @onready var demonNameLabel: Label = $Grimoire/DemonName
@@ -9,11 +10,12 @@ var current_demon = 0
 func _ready() -> void:
 	make_levels()
 	load_demon(demons_to_summon[current_demon])
-	$DemonWindow.visible = false
+	$DemonScene.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_pressed("skip_level"):
+		level_complete()
 
 func _on_object_spawner_spawn_object(object: Variant) -> void:
 	add_child(object)
@@ -36,9 +38,9 @@ func load_demon(demon: Demon):
 
 func _on_object_spawner_altar_check() -> void:
 	if $Altar.check_puzzle_completion():
-		level_complete(demons_to_summon[current_demon])
-		current_demon += 1
+		level_complete()
 
-func level_complete(demon: Demon):
-	$DemonWindow.visible = true
-	print("level complete")
+func level_complete():
+	var demon = demons_to_summon[current_demon]
+	$DemonScene.visible = true
+	$DemonScene/SpeechBubble.text = demon.description

@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbo2kwetjuaqc"]
+[gd_scene load_steps=9 format=3 uid="uid://bbo2kwetjuaqc"]
 
-[ext_resource type="Texture2D" uid="uid://crmisd5rntwpl" path="res://assets/images/demon1-Sheet.png" id="1_bxwxo"]
-[ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="2_s3uvv"]
+[ext_resource type="Texture2D" uid="uid://crmisd5rntwpl" path="res://assets/images/demon1-Sheet.png" id="1_vk3n7"]
+[ext_resource type="Script" path="res://scenes/demon_scene.gd" id="1_xw2gr"]
+[ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="2_kprho"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7idv"]
-atlas = ExtResource("1_bxwxo")
+atlas = ExtResource("1_vk3n7")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i18yd"]
-atlas = ExtResource("1_bxwxo")
+atlas = ExtResource("1_vk3n7")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2gw6p"]
@@ -29,7 +30,7 @@ animations = [{
 font_size = 22
 
 [sub_resource type="LabelSettings" id="LabelSettings_tnlri"]
-font = ExtResource("2_s3uvv")
+font = ExtResource("2_kprho")
 font_size = 50
 
 [node name="DemonScene" type="Control"]
@@ -37,6 +38,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_xw2gr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -53,7 +55,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(648, 298)
 scale = Vector2(9, 9)
 sprite_frames = SubResource("SpriteFrames_2gw6p")
-frame_progress = 0.112093
+frame_progress = 0.74984
 
 [node name="SkipText" type="Label" parent="."]
 layout_mode = 1
@@ -68,7 +70,7 @@ grow_vertical = 0
 text = "[click to skip]"
 label_settings = SubResource("LabelSettings_hf6am")
 
-[node name="Label2" type="Label" parent="."]
+[node name="SpeechBubble" type="Label" parent="."]
 modulate = Color(1, 1, 0, 1)
 layout_mode = 0
 offset_left = 168.0
