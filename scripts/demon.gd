@@ -7,6 +7,7 @@ var rows: Array
 var lines: Array
 var instructions: String
 var level: int #ised for the difficulty calculation
+var required_offerings: Array
 
 var rng = RandomNumberGenerator.new()
 
@@ -23,6 +24,7 @@ func _init(level, name, description, cols, rows, lines, instructions):
 		var puzzle = generate_puzzle(level)
 		self.rows = puzzle[0]
 		self.cols = puzzle[1]
+		self.required_offerings = puzzle[2]
 	
 	if lines.size() != 0:
 		self.lines = lines
@@ -46,16 +48,20 @@ func generate_puzzle(level):
 			candle_density = 0.6
 			skull_density = 0.3
 	
+	var total_candles = 0
+	var total_skulls = 0
+	
 	for i in range(5):
 		for j in range(5):
 			var placed_offering_value = 0
 			
 			if rng.randf() < skull_density:
 				placed_offering_value = 2
+				total_skulls += 1
 			elif rng.randf() < candle_density:
 				placed_offering_value = 1
 			
 			rows[i] += placed_offering_value
 			cols[j] += placed_offering_value
 	
-	return [rows, cols]
+	return [rows, cols, [total_candles, total_skulls]]

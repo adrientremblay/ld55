@@ -7,6 +7,7 @@ var can_spawn = false
 @export var type: Offering.OfferingType = Offering.OfferingType.CANDLE
 var candles_texture: Texture2D = load("res://assets/images/candle_crate.png")
 var skulls_texture:Texture2D = load("res://assets/images/pile_of_bones.png")
+var total_offerings = 0
 
 signal altar_check
 

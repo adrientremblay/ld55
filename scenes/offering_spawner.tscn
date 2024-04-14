@@ -25,7 +25,7 @@ offset_left = -77.0
 offset_top = 85.0
 offset_right = 74.0
 offset_bottom = 110.0
-text = "candles"
+text = "candles (12)"
 horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
