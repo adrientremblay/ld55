@@ -11,6 +11,7 @@ var in_trash = false
 signal check_if_puzzle_complete
 
 func _ready() -> void:
+	$AnimatedSprite2D.play()
 	pass # Replace with function body.
 
 func _process(delta: float) -> void: # TODO: this func is a bit messy
