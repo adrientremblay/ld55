@@ -30,7 +30,7 @@ visible = false
 z_index = 4
 
 [node name="Trash" parent="." instance=ExtResource("7_ipkkk")]
-position = Vector2(1136, 84)
+position = Vector2(1160, 198)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_eugvf")
@@ -38,10 +38,10 @@ volume_db = -5.0
 autoplay = true
 
 [node name="CandleSpawner" parent="." instance=ExtResource("3_r0mkk")]
-position = Vector2(1150, 300)
+position = Vector2(1160, 318)
 
 [node name="SkullSpawner" parent="." instance=ExtResource("3_r0mkk")]
-position = Vector2(1152, 519)
+position = Vector2(1160, 465)
 type = 1
 
 [connection signal="next_level" from="DemonScene" to="." method="_on_demon_scene_next_level"]
