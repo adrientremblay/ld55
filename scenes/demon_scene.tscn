@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbo2kwetjuaqc"]
+[gd_scene load_steps=15 format=3 uid="uid://bbo2kwetjuaqc"]
 
 [ext_resource type="Texture2D" uid="uid://crmisd5rntwpl" path="res://assets/images/demon1-Sheet.png" id="1_vk3n7"]
 [ext_resource type="Script" path="res://scripts/demon_scene.gd" id="1_xw2gr"]
 [ext_resource type="FontFile" uid="uid://dt4kihwdejs7g" path="res://assets/fonts/Caprice.ttf" id="2_kprho"]
 [ext_resource type="Texture2D" uid="uid://d2tih7s0d587d" path="res://assets/images/demon2-Sheet.png" id="3_r16y5"]
+[ext_resource type="Texture2D" uid="uid://ckg43wbq6sssh" path="res://assets/images/demon3-Sheet.png" id="3_sg0p1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7idv"]
 atlas = ExtResource("1_vk3n7")
@@ -11,6 +12,14 @@ region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i18yd"]
 atlas = ExtResource("1_vk3n7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxuky"]
+atlas = ExtResource("3_sg0p1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd42k"]
+atlas = ExtResource("3_sg0p1")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pe5kd"]
@@ -32,6 +41,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"Abaddon",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxuky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd42k")
+}],
+"loop": true,
+"name": &"Astaroth",
 "speed": 5.0
 }, {
 "frames": [{
