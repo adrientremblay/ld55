@@ -90,6 +90,7 @@ grow_vertical = 2
 texture = ExtResource("5_7vqm2")
 
 [node name="continue" type="Label" parent="Slide1"]
+layout_mode = 0
 offset_top = 665.0
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -99,6 +100,7 @@ label_settings = SubResource("LabelSettings_i4ssf")
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="Slide1"]
+layout_mode = 0
 offset_left = 96.0
 offset_top = 40.0
 offset_right = 1176.0
